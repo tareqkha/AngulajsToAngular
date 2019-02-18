@@ -15,15 +15,22 @@
           "options": {
             "outputPath": "dist/hybride",
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "main": "src/ng2/main.ts",
+            "polyfills": "src/ng2/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/ng1",
+              "src/scrfavicon.ico",
+              "src/assets",
+              {
+                "glob": "assets/**",
+                "input": "src",
+                "output": "/"
+              }
+
             ],
             "styles": [
-              "src/styles.css"
+              "src/ng2/styles.css"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -32,8 +39,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "ng2/environments/environment.ts",
+                  "with": "ng2/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
