@@ -16,10 +16,14 @@
         </select>
       </p>
 
+      <p>
+        <ng2-demo></ng2-demo>
+</p>
+
     </div>
     <div class="col-md-10">
       <!--Body content-->
-
+      <p style="text-align:center; color:green; font-size:32px;">Ceci est angularJS</p> 
       <ul class="phones">
         <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
             class="thumbnail phone-list-item">
