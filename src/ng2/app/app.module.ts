@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
 import { AppComponent } from './app.component';
 import { Ng2DemoComponent } from "./demo/ng2-demo.component";
+import { phoneServiceProvider } from "./phone.service";
 
 declare var angular: any;
 
@@ -24,7 +25,9 @@ angular.module('phonecatApp')
   entryComponents: [
     Ng2DemoComponent 
   ],
-  providers: [],
+  providers: [
+    phoneServiceProvider
+  ],
   // bootstrap: [AppComponent] 
 })
 export class AppModule {
